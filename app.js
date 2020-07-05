@@ -24,7 +24,7 @@ app.post('/users',async (req,res)=>{
 
 const saveToCloud = async function (bucketName, filename ) {
   const storage = new Storage({
-      keyFilename: './manas-mahajan-winlysis-954795e30f85.json'
+      keyFilename: path.join(__dirname,'./manas-mahajan-winlysis-954795e30f85.json')
   });
 
   async function uploadFile() {
