@@ -10,7 +10,9 @@ const bucketName = "manas-mahajan-123"
 
 app.use(express.json())
 
-
+app.get('',(req,res)=>{
+  res.send('up and running')
+})
 app.post('/users',async (req,res)=>{
       const filename = path.join( __dirname,"./users/" + shortid.generate() + ".json")
       const content = JSON.stringify(req.body)
