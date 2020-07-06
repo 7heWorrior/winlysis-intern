@@ -13,6 +13,9 @@ app.use(express.json())
 app.get('',(req,res)=>{
   res.send('up and running')
 })
+app.post('',(req,res)=>{
+  res.send(req.body)
+})
 app.post('/users',async (req,res)=>{
       const filename = path.join( __dirname,"./users/" + shortid.generate() + ".json")
       const content = JSON.stringify(req.body)
